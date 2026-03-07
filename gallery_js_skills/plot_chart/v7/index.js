@@ -17,7 +17,7 @@ window['ai_edge_gallery_get_result'] = async (data) => {
             {
               data: jsonData['values'],
               borderColor: 'rgba(75, 192, 192, 1)',
-              borderWidth: 2,
+              borderWidth: 4,
               fill: false,
             },
           ],
@@ -27,11 +27,28 @@ window['ai_edge_gallery_get_result'] = async (data) => {
             // Ensure the chart is fully drawn before we try to grab the URL
             onComplete: (context) => {
               const chartInstance = context.chart;
-              resolve(chartInstance.toBase64Image());
+              const downloadBtn = document.getElementById('downloadBtn');
+              const base64 = chartInstance.toBase64Image();
+              downloadBtn.href = base64;
+              resolve(base64);
             },
           },
           scales: {
-            y: {beginAtZero: true},
+            x: {
+              ticks: {
+                font: {
+                  size: 20,
+                },
+              },
+            },
+            y: {
+              beginAtZero: true,
+              ticks: {
+                font: {
+                  size: 20,
+                },
+              },
+            },
           },
           plugins: {
             legend: {
@@ -55,8 +72,8 @@ window['ai_edge_gallery_get_result'] = async (data) => {
         ],
       });
     });
-  } catch(e) {
+  } catch (e) {
     console.error(e);
-    return "failed to generate image";
+    return 'failed to generate image';
   }
 };
