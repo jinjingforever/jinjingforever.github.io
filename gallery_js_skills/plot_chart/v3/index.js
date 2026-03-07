@@ -1,16 +1,20 @@
 window['ai_edge_gallery_get_result'] = async (data) => {
   const ctx = document.getElementById('myChart').getContext('2d');
+  const jsonData = JSON.parse(data);
+  var type = 'line';
+  if (jsonData['type'].startsWith('bar')) {
+    type = 'bar';
+  }
 
   return new Promise((resolve) => {
     // 1. Create the Chart
     new Chart(ctx, {
-      type: 'line',
+      type: type,
       data: {
-        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+        labels: jsonData['labels'],
         datasets: [
           {
-            label: 'Monthly Sales',
-            data: [12, 19, 3, 5, 2, 3],
+            data: jsonData['values'],
             borderColor: 'rgba(75, 192, 192, 1)',
             borderWidth: 2,
             fill: false,
@@ -27,6 +31,12 @@ window['ai_edge_gallery_get_result'] = async (data) => {
         },
         scales: {
           y: {beginAtZero: true},
+        },
+        plugins: {
+          legend: {
+            // This hides the legend
+            display: false,
+          },
         },
       },
       plugins: [
