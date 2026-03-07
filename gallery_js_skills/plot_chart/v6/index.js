@@ -55,7 +55,7 @@ window['ai_edge_gallery_get_result'] = async (data) => {
         ],
       });
     });
-  }catch(e) {
+  } catch(e) {
     console.error(e);
     return "failed to generate image";
   }
