@@ -4,7 +4,7 @@
       "name": "calculate_hash",
       "displayName": "Calculate hash",
       "description": "Calculate the hash of a given text. Example: - Calculate hash of ... \n - What is the hash of ...",
-      "instructions": "Use the call_js_skill tool to calculate the hash of a given text.\n\n- The <url> to load is: https://html-preview.github.io/?url=https://github.com/jinjingforever/dump/blob/main/calculate_hash/v1/index.html\n- The <data> is a simple string: the text to hash."
+      "instructions": "Use the call_js_skill tool to calculate the hash of a given text.\n\n- The <url> to load is: https://jinjingforever.github.io/gallery_js_skills/calculate_hash/v1/index.html\n- The <data> is a simple string: the text to hash."
     },
     {
       "name": "plot_chart",
