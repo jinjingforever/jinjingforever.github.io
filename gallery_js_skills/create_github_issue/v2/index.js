@@ -33,6 +33,6 @@ async function createGithubIssue(repo, token, title, content) {
   }
 }
 
-window['ai_edge_gallery_get_result'] = async (repo, token, title, content) => {
-  return await createGithubIssue(repo, token, title, content);
+window['ai_edge_gallery_get_result'] = async (data) => {
+  return await createGithubIssue(data.repo, data.token, data.title, data.content);
 };
