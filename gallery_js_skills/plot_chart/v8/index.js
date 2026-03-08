@@ -16,8 +16,8 @@ window['ai_edge_gallery_get_result'] = async (data) => {
           datasets: [
             {
               data: jsonData['values'],
-              borderColor: 'rgba(75, 192, 192, 1)',
-              borderWidth: 4,
+              borderColor: '#0B57D0',
+              borderWidth: 6,
               fill: false,
             },
           ],
@@ -37,7 +37,7 @@ window['ai_edge_gallery_get_result'] = async (data) => {
             x: {
               ticks: {
                 font: {
-                  size: 20,
+                  size: 26,
                 },
               },
             },
@@ -45,7 +45,7 @@ window['ai_edge_gallery_get_result'] = async (data) => {
               beginAtZero: true,
               ticks: {
                 font: {
-                  size: 20,
+                  size: 26,
                 },
               },
             },
