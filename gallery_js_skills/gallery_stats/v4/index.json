@@ -1,0 +1,6 @@
+{
+  "name": "gallery_stats",
+  "displayName": "AI Edge Gallery Stats",
+  "description": "Show AI Edge Gallery app stats, such as total downloads, current users, etc.",
+  "instructions": "Use the call_js_skill tool to retrieve the stats of the AI Edge Gallery app's stats.\n\n- The <url> to load is: https://jinjingforever.github.io/gallery_js_skills/gallery_stats/v4/index.html \n- The <data> is an empty string."
+}
