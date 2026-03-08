@@ -23,6 +23,9 @@ window['ai_edge_gallery_get_result'] = async (data) => {
           ],
         },
         options: {
+          layout: {
+            padding: 48,
+          },
           animation: {
             // Ensure the chart is fully drawn before we try to grab the URL
             onComplete: (context) => {
