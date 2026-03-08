@@ -26,7 +26,7 @@ async function createGithubIssue(repo, token, title, content) {
     const data = await response.json();
     console.log('Issue created successfully!');
     console.log('Issue URL:', data.html_url);
-    return data.html_url;
+    return `[Issue created](${data.html_url})`;
   } catch (error) {
     console.error('Failed to create issue:', error.message);
     return 'failed';
