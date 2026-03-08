@@ -33,12 +33,12 @@ async function createGithubIssue(repo, token, title, content) {
   }
 }
 
-window['ai_edge_gallery_get_result'] = async (data) => {
+window['ai_edge_gallery_get_result'] = async (data, token) => {
   try {
     const jsonData = JSON.parse(data);
     return await createGithubIssue(
       jsonData.repo,
-      jsonData.token,
+      token,
       jsonData.title,
       jsonData.content,
     );
