@@ -10,7 +10,7 @@
       "name": "plot_chart",
       "displayName": "Plot chart",
       "description": "Plot a chart",
-      "instructions": "Use the call_js_skill tool to plot a chart.\n\n- The <url> to load is: https://jinjingforever.github.io/gallery_js_skills/plot_chart/v9/index.html\n- The <data> is a stringified json with the following field:\n   - <type>: The type of the chart. Could be \"line chart\" or \"bar chart\". Default to line chart.\n   - <labels>: an array of string for labels.\n   - <values>: an array of numbers for values."
+      "instructions": "Use the call_js_skill tool to plot a chart.\n\n- The <url> to load is: https://jinjingforever.github.io/gallery_js_skills/plot_chart/v10/index.html\n- The <data> is a stringified json with the following field:\n   - <type>: The type of the chart. Could be \"line chart\" or \"bar chart\". Default to line chart.\n   - <labels>: an array of string for labels.\n   - <values>: an array of numbers for values."
     },
     {
       "name": "check_wikipedia",
