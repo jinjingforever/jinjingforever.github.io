@@ -33,9 +33,11 @@ window['ai_edge_gallery_get_result'] = async (data) => {
               const downloadBtn = document.getElementById('downloadBtn');
               const base64 = chartInstance.toBase64Image();
               downloadBtn.href = base64;
-              resolve({
-                image: {base64},
-              });
+              resolve(
+                JSON.stringify({
+                  image: {base64},
+                }),
+              );
             },
           },
           scales: {
