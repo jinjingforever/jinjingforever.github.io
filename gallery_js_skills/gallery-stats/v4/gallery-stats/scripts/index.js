@@ -37,6 +37,6 @@ async function getGalleryData() {
   }
 }
 
-window['ai_edge_gallery_get_result'] = async (data) => {
+window['ai_edge_gallery_get_result'] = async () => {
   return await getGalleryData();
 };
