@@ -49,7 +49,7 @@ window['ai_edge_gallery_get_result'] = async (data) => {
               },
             },
             y: {
-              beginAtZero: true,
+              beginAtZero: false,
               ticks: {
                 font: {
                   size: 26,
