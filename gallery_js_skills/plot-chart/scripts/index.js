@@ -35,7 +35,8 @@ window['ai_edge_gallery_get_result'] = async (data) => {
               downloadBtn.href = base64;
               resolve(
                 JSON.stringify({
-                  image: {base64},
+                  result: 'The chart image has been genereated',
+                  image: {base64}
                 }),
               );
             },
