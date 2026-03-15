@@ -5,9 +5,15 @@ async function digestMessage(message) {
   const hashHex = hashArray
     .map((b) => b.toString(16).padStart(2, '0'))
     .join(''); // convert bytes to hex string
-  return hashHex;
+  return {result: hashHex};
 }
 
 window['ai_edge_gallery_get_result'] = async (data) => {
-  return await digestMessage(data)
+  try {
+    const jsonData = JSON.parse(data);
+    return JSON.stringify(await digestMessage(jsonData['text']))
+  } catch (e) {
+    console.error(e);
+    return {error: `Failed to calculate hash: ${e.message}`}
+  }
 };

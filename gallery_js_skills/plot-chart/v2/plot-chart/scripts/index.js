@@ -36,7 +36,7 @@ window['ai_edge_gallery_get_result'] = async (data) => {
               resolve(
                 JSON.stringify({
                   result: 'The chart image has been genereated',
-                  image: {base64}
+                  image: {base64},
                 }),
               );
             },
@@ -82,6 +82,6 @@ window['ai_edge_gallery_get_result'] = async (data) => {
     });
   } catch (e) {
     console.error(e);
-    return 'failed to generate image';
+    return {error: `Failed to generate image: ${e.message}`};
   }
 };
